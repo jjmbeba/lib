@@ -1,0 +1,58 @@
+{
+  "name": "library-book-tracking-frontend",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "pnpm typecheck && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test:unit": "vitest run",
+    "typecheck": "vue-tsc --build",
+    "lint": "eslint .",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check .",
+    "generate:api": "orval --config ./orval.config.ts"
+  },
+  "dependencies": {
+    "@tanstack/vue-query": "^5.108.2",
+    "@vee-validate/valibot": "^4.15.1",
+    "valibot": "^1.5.0",
+    "vee-validate": "^4.15.1",
+    "vue": "^3.5.46",
+    "vue-router": "^5.5.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@tsconfig/node24": "^24.0.5",
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^24.13.4",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "@vitest/eslint-plugin": "^1.6.27",
+    "@vue/eslint-config-typescript": "^14.9.0",
+    "@vue/test-utils": "^2.5.0",
+    "@vue/tsconfig": "^0.9.1",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "~10.11.0",
+    "jsdom": "^30.0.1",
+    "orval": "^8.48.0",
+    "oxfmt": "^0.79.0",
+    "tailwindcss": "^4.3.5",
+    "typescript": "~6.0.0",
+    "vite": "^8.2.2",
+    "vitest": "^4.1.11",
+    "vue-eslint-parser": "^10.4.1",
+    "vue-tsc": "^3.3.11"
+  },
+  "engines": {
+    "node": ">=24.18.0"
+  },
+  "packageManager": "pnpm@10.33.2",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "vue-demi"
+    ]
+  }
+}
