@@ -1,1 +1,97 @@
 @import 'tailwindcss';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+@theme {
+  --color-canvas: #f2f0ea;
+  --color-surface: #fbfaf7;
+  --color-raised: #fbfaf7;
+  --color-ink: #222823;
+  --color-muted: #707b75;
+  --color-accent: #477465;
+  --color-highlight: #d6b75d;
+  --color-border: #daddd6;
+  --color-reading-soft: #e4eee8;
+  --color-complete-soft: #f2eedc;
+  --color-error: #a43e33;
+
+  --color-dark-canvas: #171c1a;
+  --color-dark-surface: #202724;
+  --color-dark-raised: #2b332e;
+  --color-dark-ink: #eceee7;
+  --color-dark-muted: #a0aaa3;
+  --color-dark-accent: #8ab8a3;
+  --color-dark-highlight: #d8be71;
+  --color-dark-border: #3a4540;
+  --color-dark-reading-soft: #2d4038;
+  --color-dark-complete-soft: #3c3828;
+  --color-dark-error: #f08a7e;
+
+  --font-display: 'Newsreader', Georgia, serif;
+  --font-ui: 'DM Sans', ui-sans-serif, sans-serif;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-display: 40px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --tracking-tight: -0.02em;
+  --tracking-label: 0.08em;
+  --leading-body: 24px;
+  --leading-display: 46px;
+  --opacity-muted: 68%;
+
+  --breakpoint-mobile: 375px;
+  --breakpoint-desktop: 1280px;
+  --container-content: 1280px;
+  --container-page: 1600px;
+
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+}
+
+:root {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-canvas: var(--color-dark-canvas);
+  --color-surface: var(--color-dark-surface);
+  --color-raised: var(--color-dark-raised);
+  --color-ink: var(--color-dark-ink);
+  --color-muted: var(--color-dark-muted);
+  --color-accent: var(--color-dark-accent);
+  --color-highlight: var(--color-dark-highlight);
+  --color-border: var(--color-dark-border);
+  --color-reading-soft: var(--color-dark-reading-soft);
+  --color-complete-soft: var(--color-dark-complete-soft);
+  --color-error: var(--color-dark-error);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-ui);
+  }
+}
